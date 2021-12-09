@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>学生信息管理系统</title>
+</head>
+   <body>
+      <form action = "/login" method ="POST">
+         {{ form.csrf_token }}
+         <dl>
+            <dt>用户名:</dt>
+                <p>{{ form.username }} {%if form.username.errors %}{{ form.username.errors[0] }} {% endif %}</p>
+            <dt>密码:</dt>
+               <p>{{ form.password }} {%if form.password.errors %}{{ form.password.errors[0] }} {% endif %}</p>
+         </dl>
+         <!-- <p><input type = submit value ="登录"></p> -->
+         <p><input type = submit value ="登录"></p>
+      </form>
+
+   </body>
+</html>
+

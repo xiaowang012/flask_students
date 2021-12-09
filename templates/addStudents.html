@@ -1,0 +1,77 @@
+
+<!-- <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>homepage</title>
+</head>
+   <body>
+      <form action = "/management" method = "POST">
+         <h3>学生信息录入</h3>
+         学号<br>
+         <input style = "margin-top: 10px" type = "text" name = "id" /></br>
+
+         姓名<br>
+         <input style = "margin-top: 10px" type = "text" name = "name" /><br>
+         性别<br>
+         <input style = "margin-top: 10px" type = "text" name = "sex" /><br>
+         出生年月<br>
+         <input style = "margin-top: 10px" type = "text" name = "date" /><br>
+         民族<br>
+         <input style = "margin-top: 10px" type = "text" name = "nation" /><br>
+         身高<br>
+         <input style = "margin-top: 10px" type = "text" name = "height" /><br>
+        身份证号码<br>
+        <input style = "margin-top: 10px" type = "text" name = "idCard" /><br>
+         家长电话<br>
+         <input style = "margin-top: 10px" type = "text" name = "PhoneNumber" /><br>
+         家庭住址<br>
+         <input style = "margin-top: 10px" type = "text" name = "address" /><br>
+         班主任<br>
+         <input style = "margin-top: 10px" type = "text" name = "teacher" /><br>
+         兴趣特长<br>
+         <input style = "margin-top: 10px" type = "text" name = "hobbies" /><br>
+         <input style = "margin-top: 10px" type = "submit" value = "提交" /><br>
+      </form>
+
+   </body> 
+</html> --> 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>学生信息更新</title>
+</head>
+   <body>
+         <form action = "/addStudents" method ="POST">
+         <h3>学生信息录入</h3>
+         {{ form.csrf_token }}
+         <dl>
+            <dt>学号:</dt>
+                <p>{{ form.id }} {%if form.id.errors %}{{ form.id.errors[0] }} {% endif %}</p>
+            <dt>姓名:</dt>
+                <p>{{ form.name }} {%if form.name.errors %}{{ form.name.errors[0] }} {% endif %}</p>
+            <dt>性别:</dt>
+                <p>{{ form.sex }} {%if form.sex.errors %}{{ form.sex.errors[0] }} {% endif %}</p>
+            <dt>出生年月:</dt>
+                <p>{{ form.date }} {%if form.date.errors %}{{ form.date.errors[0] }} {% endif %}</p>
+            <dt>民族:</dt>
+                <p>{{ form.nation }} {%if form.nation.errors %}{{ form.nation.errors[0] }} {% endif %}</p>
+            <dt>身高:</dt>
+                <p>{{ form.height }} {%if form.height.errors %}{{ form.height.errors[0] }} {% endif %}</p>
+            <dt>身份证号码:</dt>
+                <p>{{ form.idCard }} {%if form.idCard.errors %}{{ form.idCard.errors[0] }} {% endif %}</p>
+            <dt>家长电话:</dt>
+                <p>{{ form.PhoneNumber }} {%if form.PhoneNumber.errors %}{{ form.PhoneNumber.errors[0] }} {% endif %}</p>
+            <dt>家庭住址:</dt>
+                <p>{{ form.address }} {%if form.address.errors %}{{ form.address.errors[0] }} {% endif %}</p>
+            <dt>班主任:</dt>
+                <p>{{ form.teacher }} {%if form.teacher.errors %}{{ form.teacher.errors[0] }} {% endif %}</p>
+            <dt>兴趣爱好:</dt>
+                <p>{{ form.hobbies }} {%if form.hobbies.errors %}{{ form.hobbies.errors[0] }} {% endif %}</p>
+         </dl>
+         <p><input type = submit value ="提交"></p>
+         
+         
+        
+      </form>
+
+   </body>
+</html>

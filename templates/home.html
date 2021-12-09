@@ -1,0 +1,16 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>homepage</title>
+</head>
+   <body>
+      <form action = "/home" method = "POST">
+         <h3>学生信息查询(请输入学号/姓名)</h3>
+         {{ form.csrf_token }}
+         <dt>学号/姓名:</dt>
+         <p>{{ form.searchId }} {%if form.searchId.errors %}{{ form.searchId.errors[0] }} {% endif %}</p>
+         <input style = "margin-top: 10px"  type = "submit" value = "查询" /><br>
+      </form>
+      <h2><a style = "font-size:17px;margin-top: 10px;color:blue;" href = "/management">返回</a></h2>
+   </body>
+</html>

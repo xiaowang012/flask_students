@@ -1,0 +1,18 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>学生批量导入</title>
+</head>
+   <body>
+      <h3>学生批量导入</h3>
+      <form action = "/upload" method = "POST" 
+         enctype = "multipart/form-data">
+         {{ form.csrf_token }}
+         <p>{{ form.file }} {%if form.file.errors %}{{ form.file.errors[0] }} {% endif %}</p>
+         <p><input style="width:50px;height:30px" type = submit value ="提交"></p>
+      </form>
+      <h2><a style = "font-size:17px;margin-top: 10px;color:blue;" href = "/management">返回主页</a></h2>
+   </body>
+</html>
+
+

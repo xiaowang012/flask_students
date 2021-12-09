@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>注册</title>
+</head>
+   <body>
+      <form action = "/register" method ="POST">
+         {{ form.csrf_token }}
+         <dl>
+            <dt>用户名:</dt>
+                <p>{{ form.username }} {%if form.username.errors %}{{ form.username.errors[0] }} {% endif %}</p>
+            <dt>密码:</dt>
+               <p>{{ form.password }} {%if form.password.errors %}{{ form.password.errors[0] }} {% endif %}</p>
+            <dt>确认密码:</dt>
+               <p>{{ form.password1 }} {%if form.password1.errors %}{{ form.password1.errors[0] }} {% endif %}</p>
+         </dl>
+         <p><input type = submit value ="注册"></p>
+      </form>
+
+   </body>
+</html>
