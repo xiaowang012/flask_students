@@ -6,4 +6,4 @@
 1.安装依赖包：pip install -r requirements.txt    
 2.数据库迁移：执行db.create_all()即可创建对应的数据库，和数据表。    
 3.run app.py    
-4.不涉及到部署   
+4.不涉及到部署  
