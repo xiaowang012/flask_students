@@ -4,10 +4,10 @@ import sys
 import platform
 
 basedir = os.path.abspath(os.path.dirname(__file__))
+system_type = sys.platform
 
 class DataBaseConfig(object):
     DEBUG = True
-    system_type = sys.platform
     if system_type == 'win32':
         #windows
         SQLALCHEMY_DATABASE_URI =   "sqlite:///"+os.path.join(basedir +"\\database\\", "database123.db")
