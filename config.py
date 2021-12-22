@@ -1,10 +1,19 @@
 #coding=utf-8
 import os
+import sys
+import platform
+
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 class DataBaseConfig(object):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI =   "sqlite:///"+os.path.join(basedir +"\\database\\", "database123.db")
+    system_type = sys.platform
+    if system_type == 'win32':
+        #windows
+        SQLALCHEMY_DATABASE_URI =   "sqlite:///"+os.path.join(basedir +"\\database\\", "database123.db")
+    elif system_type == 'linux':
+        #linux
+        SQLALCHEMY_DATABASE_URI =   "sqlite:///"+os.path.join(basedir +"/database/", "database123.db")
 
 class EmailConfig(object):
     MAIL_SERVER = 'smtp.qq.com'

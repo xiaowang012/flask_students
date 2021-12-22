@@ -40,5 +40,5 @@ class SearchIdForms(FlaskForm):
 
 class UploadFileForms(FlaskForm):
     #批量导入页面过滤其他文件类型
-    file = FileField('file',validators = [FileRequired(message = '文件不能为空！'),FileAllowed(['xlsx','xls'],message = '文件格式错误(仅支持xlsx/xls)！')])
+    file = FileField('file',validators = [FileRequired(message = '文件不能为空!'),FileAllowed(['xlsx','xls'],message = '文件格式错误(仅支持xlsx/xls)！')])
     submit = SubmitField('提交')
